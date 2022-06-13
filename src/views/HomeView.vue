@@ -3,9 +3,11 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div> -->
-  <Hero></Hero>
+  <div class="font-body">
+    <Hero></Hero>
   <Card></Card>
   <Footer></Footer>
+  </div>
 </template>
 
 <script>

@@ -1,17 +1,17 @@
 <template>
   <div class="bg-gray-100 ">
-      <div class="max-w-auto mx-64 py-20">
-      <div><h1 class="text-4xl mb-5">Browse All Topics</h1></div>
-    <div class="mt-8 grid lg:grid-cols-4 gap-10 container mx-auto px-4">
+      <div class="max-w-auto mx-auto  py-20">
+      <div><h1 class="text-4xl mb-12">Browse All Topics</h1></div>
+    <div class="mt-8 grid lg:grid-cols-4 gap-10 container mx-auto px-4 flex justify-center ">
       <div v-for="topic in Topics" :key="topic.id" class="card ">
         <div class="group relative ">
-          <div class=""><i :class="topic.icon" ></i></div>
-          <div class="font-semibold mb-2">{{ topic.title }}</div>
+          <div class="mb-6"><i :class="topic.icon" class="text-5xl " ></i></div>
+          <div class="font-semibold mb-4">{{ topic.title }}</div>
           <div v-for="content in topic.content" :key="content">
             <p class="truncate leading-7 ">{{content}}</p>
           </div>
         </div>
-        <p class="font-semibold">See all guides</p>
+        <p class="font-semibold mb-6">See all guides</p>
       </div>
     </div>
   </div></div>
@@ -26,7 +26,7 @@ export default {
 
     return {
       Topics: computed(() => store.getters["topicsStore/getdisplayTopics"]),
-      // searchedTopics: computed(() => store.getters["topicsStore/getSearchedTopics"]),
+      
     };
   },
 };
